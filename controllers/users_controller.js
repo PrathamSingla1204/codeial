@@ -16,3 +16,12 @@ module.exports.signup = function(req,res){
         title:"Sign-up"
     });
 }
+
+module.exports.create = function(req,res){
+    //TODO later
+}
+
+
+module.exports.createSession = function(req,res){
+    //TODO later
+}
