@@ -1,0 +1,23 @@
+$header-height: 60px;
+$header-bg-color: #333;
+$header-text-color: #fff;
+
+header {
+  height: $header-height;
+  background-color: $header-bg-color;
+  color: $header-text-color;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    li {
+      margin-left: 20px;
+    }
+  }
+}

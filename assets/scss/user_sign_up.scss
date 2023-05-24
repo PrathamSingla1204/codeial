@@ -1,0 +1,19 @@
+$primary-color: #007bff;
+
+h1 {
+  color: $primary-color;
+}
+
+form {
+  input[type="submit"] {
+    background-color: $primary-color;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}

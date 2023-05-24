@@ -1,0 +1,12 @@
+$footer-height: 40px;
+$footer-bg-color: #333;
+$footer-text-color: #fff;
+
+footer {
+  height: $footer-height;
+  background-color: $footer-bg-color;
+  color: $footer-text-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
