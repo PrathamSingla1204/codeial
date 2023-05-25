@@ -1,5 +1,25 @@
-$primary-color: #007bff;
-
-h1 {
-  color: $primary-color;
+#feed-posts {
+  h4 {
+    margin-bottom: 10px;
+  }
+  #new-post-form {
+    margin-bottom: 20px;
+    textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  #posts-list-container {
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        margin-bottom: 10px;
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
 }

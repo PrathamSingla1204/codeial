@@ -1,3 +1,21 @@
-h1 {
-  color: #007bff;
+#feed-posts h4 {
+  margin-bottom: 10px;
+}
+#feed-posts #new-post-form {
+  margin-bottom: 20px;
+}
+#feed-posts #new-post-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#feed-posts #posts-list-container ul {
+  list-style: none;
+  padding: 0;
+}
+#feed-posts #posts-list-container ul li {
+  margin-bottom: 10px;
+}
+#feed-posts #posts-list-container ul li p {
+  margin: 0;
 }
