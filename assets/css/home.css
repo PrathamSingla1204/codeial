@@ -1,21 +1,127 @@
-#feed-posts h4 {
-  margin-bottom: 10px;
+@charset "UTF-8";
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f5f8fa;
 }
-#feed-posts #new-post-form {
-  margin-bottom: 20px;
+
+header {
+  background-color: #1da1f2;
+  color: white;
+  padding: 10px 15px;
 }
-#feed-posts #new-post-form textarea {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
+header a {
+  color: white;
+  text-decoration: none;
 }
-#feed-posts #posts-list-container ul {
+header a:hover {
+  text-decoration: underline;
+}
+header ul {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
-#feed-posts #posts-list-container ul li {
-  margin-bottom: 10px;
+header ul li {
+  display: inline-block;
+  margin-right: 10px;
 }
-#feed-posts #posts-list-container ul li p {
-  margin: 0;
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+}
+main h1 {
+  color: #14171a;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+main h4 {
+  color: #14171a;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+main form {
+  margin-bottom: 15px;
+}
+main form textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: none;
+  resize: none;
+  background-color: #f5f8fa;
+  border: solid #e1e8ed;
+  border-width: 0.5px;
+  outline: none;
+  transition: border 0.2s ease-in-out;
+}
+main form textarea:focus {
+  border: solid #1da1f2;
+  border-width: 0.5px;
+  transition: border 0.2s ease-in-out;
+}
+main form input[type=submit] {
+  background-color: #1da1f2;
+  color: white;
+  padding: 0.5em 0.75em;
+  border-radius: 0.25em;
+  border: none;
+  outline: none;
+}
+main form input[type=submit]:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.2s ease-in-out opacity;
+}
+main ul {
+  list-style: none;
+  margin-top: 0.5em;
+}
+main ul li {
+  background-color: white;
+  padding: 0.75em 0.75em 0.75em 0.75em;
+  border-radius: 0.25em;
+}
+main ul li + li {
+  margin-top: 0.5em;
+}
+main ul li p small {
+  color: #657786;
+}
+main ul li p small::before {
+  content: "·";
+  margin-right: 0.25em;
+  margin-left: 0.25em;
+}
+main ul li div.post-comments form input[type=text] {
+  width: auto;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  box-sizing: border-box;
+  border-radius: 0.25em;
+  border: solid #e1e8ed;
+  border-width: 0.5px;
+  outline: none;
+  transition: border 0.2s ease-in-out;
+}
+main ul li div.post-comments form input[type=text]:focus {
+  border: solid #1da1f2;
+  border-width: 0.5px;
+  transition: border 0.2s ease-in-out;
+}
+main ul li div.post-comments form input[type=submit] {
+  background-color: #1da1f2;
+  color: white;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  border-radius: 0.25em;
+  border: none;
+  outline: none;
+}
+main ul li div.post-comments form input[type=submit]:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.2s ease-in-out opacity;
 }

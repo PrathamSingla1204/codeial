@@ -1,23 +1,191 @@
-#feed-posts {
-  h4 {
-    margin-bottom: 10px;
-  }
-  #new-post-form {
-    margin-bottom: 20px;
-    textarea {
-      display: block;
-      width: 100%;
-      margin-bottom: 10px;
+// Define variables for colors
+$primary-color: #1da1f2;
+$secondary-color: #14171a;
+$tertiary-color: #657786;
+$quaternary-color: #aab8c2;
+$quinary-color: #e1e8ed;
+$senary-color: #f5f8fa;
+
+// Style the body element
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: $senary-color;
+}
+
+// Style the header element
+header {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 15px;
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
-  #posts-list-container {
-    ul {
-      list-style: none;
-      padding: 0;
-      li {
-        margin-bottom: 10px;
-        p {
-          margin: 0;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+
+// Style the main element
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+
+  h1 {
+    color: $secondary-color;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  h4 {
+    color: $secondary-color;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  form {
+    margin-bottom: 15px;
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      box-sizing:border-box; 
+      border-radius:4px; 
+      border:none; 
+      resize:none; 
+      background-color:$senary-color; 
+      border:solid $quinary-color; 
+      border-width:.5px; 
+      outline:none; 
+      transition:border .2s ease-in-out; 
+
+      &:focus { 
+        border:solid $primary-color; 
+        border-width:.5px; 
+        transition:border .2s ease-in-out; 
+      }
+    }
+
+    input[type="submit"] {
+      background-color:$primary-color; 
+      color:white; 
+      padding:.5em .75em; 
+      border-radius:.25em; 
+      border:none; 
+      outline:none; 
+
+      &:hover { 
+        cursor:pointer; 
+        opacity:.9; 
+        transition:.2s ease-in-out opacity; 
+      }
+    }
+  }
+
+  ul {
+    list-style:none; 
+    margin-top:.5em; 
+
+    li { 
+      background-color:white; 
+      padding:.75em .75em .75em .75em; 
+      border-radius:.25em; 
+
+      & + li { 
+        margin-top:.5em; 
+      }
+
+      p { 
+
+        small { 
+
+          color:$tertiary-color; 
+
+          &::before { 
+
+            content:"\00b7"; 
+
+            margin-right:.25em; 
+
+            margin-left:.25em; 
+
+          }
+        }
+      }
+
+      div.post-comments { 
+
+        form { 
+
+          input[type="text"] { 
+
+            width:auto; 
+
+            padding:.25em .5em .25em .5em;
+
+            box-sizing:border-box;
+
+            border-radius:.25em;
+
+            border:solid $quinary-color;
+
+            border-width:.5px;
+
+            outline:none;
+
+            transition:border .2s ease-in-out;
+
+            &:focus {
+
+              border:solid $primary-color;
+
+              border-width:.5px;
+
+              transition:border .2s ease-in-out;
+
+            }
+          }
+
+          input[type="submit"] {
+
+            background-color:$primary-color;
+
+            color:white;
+
+            padding:.25em .5em .25em .5em;
+
+            border-radius:.25em;
+
+            border:none;
+
+            outline:none;
+
+            &:hover {
+
+              cursor:pointer;
+
+              opacity:.9;
+
+              transition:.2s ease-in-out opacity;
+
+            }
+          }
         }
       }
     }
