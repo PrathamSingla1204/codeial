@@ -19,7 +19,7 @@ module.exports.profile = async function(req, res) {
         profile_user: user
       });
     } catch (err) {
-      console.log(err);
+        req.flash('error',err);
     }
   }
   
@@ -30,7 +30,7 @@ module.exports.profile = async function(req, res) {
             await User.findByIdAndUpdate(req.params.id, req.body);
             return res.redirect('back');
         } catch (err) {
-            // handle error
+            req.flash('error',err);
         }
     } else {
         return res.status(401).send('Unauthorized');
@@ -71,8 +71,10 @@ module.exports.create = async function(req, res){
         const user = await User.findOne({email: req.body.email});
         if (!user){
             await User.create(req.body);
+            req.flash('success',"Account Created");
             return res.redirect('/users/sign-in');
         } else {
+            req.flash('error','Account cant be created');
             return res.redirect('back');
         }
     } catch (err) {

@@ -17,7 +17,7 @@ module.exports.home = async function(req, res) {
       all_users: users
     });
   } catch (err) {
-    console.log(err);
+    req.flash('err',err);
   }
 }
 
