@@ -1,127 +1,45 @@
-@charset "UTF-8";
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #f5f8fa;
+#home-container {
+  display: flex;
 }
-
-header {
-  background-color: #1da1f2;
-  color: white;
-  padding: 10px 15px;
-}
-header a {
-  color: white;
-  text-decoration: none;
-}
-header a:hover {
-  text-decoration: underline;
-}
-header ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-header ul li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 15px;
-}
-main h1 {
-  color: #14171a;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-main h4 {
-  color: #14171a;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-main form {
-  margin-bottom: 15px;
-}
-main form textarea {
-  width: 100%;
+#home-container #feed-posts {
+  width: 70%;
   padding: 10px;
-  box-sizing: border-box;
-  border-radius: 4px;
-  border: none;
+}
+#home-container #user-friends {
+  width: 30%;
+  padding: 10px;
+  border-left: 1px solid lightgrey;
+  height: 100%;
+}
+#home-container a {
+  transition: color 0.2s ease-in-out;
+}
+#home-container a:hover {
+  color: #0077cc;
+}
+#home-container #new-post-form {
+  display: flex;
+  flex-direction: column;
+}
+#home-container #new-post-form textarea {
   resize: none;
-  background-color: #f5f8fa;
-  border: solid #e1e8ed;
-  border-width: 0.5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+}
+#home-container #new-post-form textarea:focus {
   outline: none;
-  transition: border 0.2s ease-in-out;
+  border-color: #0077cc;
 }
-main form textarea:focus {
-  border: solid #1da1f2;
-  border-width: 0.5px;
-  transition: border 0.2s ease-in-out;
-}
-main form input[type=submit] {
-  background-color: #1da1f2;
-  color: white;
-  padding: 0.5em 0.75em;
-  border-radius: 0.25em;
-  border: none;
-  outline: none;
-}
-main form input[type=submit]:hover {
+#home-container #new-post-form input[type=submit] {
   cursor: pointer;
-  opacity: 0.9;
-  transition: 0.2s ease-in-out opacity;
-}
-main ul {
-  list-style: none;
-  margin-top: 0.5em;
-}
-main ul li {
-  background-color: white;
-  padding: 0.75em 0.75em 0.75em 0.75em;
-  border-radius: 0.25em;
-}
-main ul li + li {
-  margin-top: 0.5em;
-}
-main ul li p small {
-  color: #657786;
-}
-main ul li p small::before {
-  content: "·";
-  margin-right: 0.25em;
-  margin-left: 0.25em;
-}
-main ul li div.post-comments form input[type=text] {
-  width: auto;
-  padding: 0.25em 0.5em 0.25em 0.5em;
-  box-sizing: border-box;
-  border-radius: 0.25em;
-  border: solid #e1e8ed;
-  border-width: 0.5px;
-  outline: none;
-  transition: border 0.2s ease-in-out;
-}
-main ul li div.post-comments form input[type=text]:focus {
-  border: solid #1da1f2;
-  border-width: 0.5px;
-  transition: border 0.2s ease-in-out;
-}
-main ul li div.post-comments form input[type=submit] {
-  background-color: #1da1f2;
-  color: white;
-  padding: 0.25em 0.5em 0.25em 0.5em;
-  border-radius: 0.25em;
+  padding: 10px 20px;
+  border-radius: 5px;
   border: none;
-  outline: none;
+  background-color: #0077cc;
+  color: white;
 }
-main ul li div.post-comments form input[type=submit]:hover {
-  cursor: pointer;
-  opacity: 0.9;
-  transition: 0.2s ease-in-out opacity;
+#home-container #new-post-form input[type=submit]:hover {
+  background-color: #0066b3;
 }
