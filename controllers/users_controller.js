@@ -1,15 +1,6 @@
 const User = require('../models/user');
 
 
-// module.exports.profile = function(req, res){
-//      User.findById(req.params.id,function(err,user){
-//         return res.render('user_profile', {
-//             title: 'User Profile',
-//             profile_user:user
-        
-//     });
-//     });
-// }
 
 module.exports.profile = async function(req, res) {
     try {
@@ -27,9 +18,21 @@ module.exports.profile = async function(req, res) {
   module.exports.update = async function(req, res) {
     if (req.user.id == req.params.id) {
         try {
-            await User.findByIdAndUpdate(req.params.id, req.body);
+         let user =   await User.findById(req.params.id);
+         User.uploadedAvatar(req,res,function(err){
+            console.log(req.body);
+            if(err){console.log('####MULTER ERROR :',err);}
+            user.name = req.body.name;
+            user.email = req.body.email;
+            if(req.file){
+                //in db we r just saving its address
+                user.avatar = User.avatarPath + '/' + req.file.filename;
+            }
+            user.save();
             return res.redirect('back');
-        } catch (err) {
+         });
+        } 
+        catch (err) {
             req.flash('error',err);
         }
     } else {
